@@ -1,0 +1,1 @@
+/home/joakim/.config/fish/
