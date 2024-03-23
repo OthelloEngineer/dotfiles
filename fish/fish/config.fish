@@ -5,7 +5,9 @@ if status is-interactive
   tmux
   cd
   clear
-   
+  set -Ux projects ~/projects
+  set -Ux uni ~/uni
+  set -Ux configs ~/.config  
 end
 
 function gitgap
@@ -35,4 +37,10 @@ function kdry -d "Perform a dry run of a deployment and output to YAML"
 
     kubectl create deployment $deployment_name --image=$deployment_name --dry-run=client -o yaml > $deployment_name.yaml
     echo "Dry run output saved to $deployment_name.yaml"
+end
+
+function cdto -d "Change directory to a path relative to home"
+    set -l target $HOME/$argv
+    cd $target
+    echo "Current directory: " (pwd)
 end

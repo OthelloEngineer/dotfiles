@@ -135,7 +135,9 @@ vim.api.nvim_create_autocmd({ "UIEnter", "BufReadPost", "BufNewFile" }, {
 
 -------------------------------------- commands ------------------------------------------
 local new_cmd = vim.api.nvim_create_user_command
-
+vim.api.nvim_create_user_command('RemoveCR', function()
+    vim.cmd('%s/\\r//g')
+end, {desc = 'Remove carriage returns'})
 new_cmd("NvChadUpdate", function()
   require "nvchad.updater"()
 end, {})
