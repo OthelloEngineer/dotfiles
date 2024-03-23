@@ -35,7 +35,7 @@ Create a new directory within the repository for your configuration, if it doesn
 The directory should be named [PACKAGE NAME]/[PACKAGE NAME]/[DOT FILES...]
 The nested directories with duplicated names are needed because serve different purposes each
 1. The outer directory is used to identify the stow package. Which is practical for keeping different versions of the same application configuration such as *"fish full featured"* *"fish minimal"*.
-2. The inner directory is used to maintain the name of the application that the configuration files are describing. If the inner directory was not added then, for instance, the *fish* dotfiles will be put into the ~/config/ dir and not ~/config/fish/ dir. This allows the target command to be agnostic of installed service, allowing the user to install several packages with one command 
+2. The inner directory is used to maintain the name of the application that the configuration files are describing. If the inner directory was not added then, for instance, the *fish* dotfiles will be put into the ~/config/ dir and not ~/config/fish/ dir. This allows the target command to be agnostic of installed service, making it possible to several packages with one command 
 
 Add your dotfiles to this directory. These can be new configurations or overrides for existing ones.
 
