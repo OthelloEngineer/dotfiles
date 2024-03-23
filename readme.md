@@ -22,7 +22,8 @@ Creating the symbolic links to the desired location. For demostration here I am 
 stow -t ~/.config/ [PACKAGE NAME]
 ```
 
-Example
+Example:
+
 To install the tmux configuration, you would run:
 
 ```bash
