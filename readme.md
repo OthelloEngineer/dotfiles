@@ -7,8 +7,8 @@ The purpose of this repository is to streamline the setup process for new enviro
 To replicate my environment or utilize these configurations, follow the steps below:
 
 ### Prerequisites
-- git: For cloning and synchronizing the packages with symlinks
-- stow: For managing and creating the symlinks between the git controlled directory and the dotfiles targets (Usually ~/.config/)
+- **git**: For cloning and synchronizing the packages with symlinks
+- **stow**: For managing and creating the symlinks between the git controlled directory and the dotfiles targets (Usually ~/.config/)
 ### procedure 
 Acquire the dotfiles locally on your computer by cloning the repository
 
