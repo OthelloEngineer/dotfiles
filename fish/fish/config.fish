@@ -1,9 +1,11 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
   alias vim=nvim
+  alias k=kubectl
   tmux
   cd
   clear
+   
 end
 
 function gitgap
@@ -22,3 +24,15 @@ function mdcd
   cd $argv
 end 
 
+function kdry -d "Perform a dry run of a deployment and output to YAML"
+    if test (count $argv) -lt 1
+        echo "missing name"
+        echo "Usage: kdry <deployment-name>"
+        return 1
+    end
+
+    set deployment_name $argv[1]
+
+    kubectl create deployment $deployment_name --image=$deployment_name --dry-run=client -o yaml > $deployment_name.yaml
+    echo "Dry run output saved to $deployment_name.yaml"
+end
