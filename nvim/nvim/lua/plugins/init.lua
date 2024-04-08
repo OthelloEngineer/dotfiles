@@ -64,6 +64,7 @@ local default_plugins = {
       dofile(vim.g.base46_cache .. "blankline")
       require("indent_blankline").setup(opts)
     end,
+
   },
 
   {
@@ -122,11 +123,33 @@ local default_plugins = {
       require "plugins.configs.lspconfig"
     end,
   },
+  {
+		"zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    build = ":Copilot auth",
+    opts = {
+      suggestion = {
+        auto_trigger = true,
+        enabled = true,
+        keymap = { accept = "<tab>" }
+      },
+      panel = { enabled = true},
+
+      filetypes = {
+        markdown = true,
+        help = true,
+      },
+    },
+  },
 
   -- load luasnips + cmp related in insert mode only
   {
-    "github/copilot.vim",
+      "zbirenbaum/copilot-cmp",
+      config = function()
+          require("copilot_cmp").setup()
+      end,
   },
+
   {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",

@@ -130,8 +130,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Source Code Pro
-    # family: CodeNewRoman Nerd Font
+    family: JetBrainsMono Nerd Font    # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
     # family: Hack
     # family: JetBrains Mono
@@ -149,8 +148,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Source Code Pro
-    # family: CodeNewRoman Nerd Font
+    family: JetBrainsMono Nerd Font    # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
     # family: Hack
     # family: JetBrains Mono
@@ -168,8 +166,7 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Source Code Pro
-    # family: CodeNewRoman Nerd Font
+    family: JetBrainsMono Nerd Font    # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
     # family: Hack
     # family: JetBrains Mono
